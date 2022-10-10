@@ -9,7 +9,7 @@ The source code is for CircuitPython to run on the Raspberry Pi Pico or Pi Pico 
 PIO is used to output data in parallel to the AD7302. Each 32 bits of data contains 8-bit x and y values and an 8-bit relative brightness. Frame rates tend to be around 80-90fps, falling as low as the 20fps during the zoom transition animation. A looping background write is used to allow the screen to refresh at a high constant rate even as the frame rates drop. 
 
 ## Wiring
-'''
+```
 Pico  AD7302
  GP0   DB0
  GP1   DB1
@@ -29,4 +29,4 @@ VSYS   VDD
  GND   !CS
  GND   AGND
  GND   DGND
- ''' 
+```
