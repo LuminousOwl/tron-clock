@@ -5,4 +5,4 @@ TRON Oscilloscope Clock
 
 The source code is for CircuitPython to run on the Raspberry Pi Pico or Pi Pico W. There is code to initialize the time over WIFI or adjust the hours and minutes using buttons. Either can be disabled relatively easily by removing or commenting imports and code out in the tron.py file. WIFI requires CircuitPython 8.0.0-beta.1 or later. The code requires an AD7302 DAC, but could use an R2R or other type of DAC by replacing the ad7302.py file.
 
-PIO is used to output data in parallel to the AD7302. Each 32 bits of data contains 8-bit x and y values and an 8-bit relative brightness. Frame rates tend to be around 80fps falling into the mid 20s during the time transition animations. A looping background write is used to allow the screen to refresh at a high rate even as the frame rates drop. 
+PIO is used to output data in parallel to the AD7302. Each 32 bits of data contains 8-bit x and y values and an 8-bit relative brightness. Frame rates tend to be around 80fps, falling into the mid 20s during the time transition animations. A looping background write is used to allow the screen to refresh at a high rate even as the frame rates drop. 
