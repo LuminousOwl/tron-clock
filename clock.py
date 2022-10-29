@@ -143,13 +143,11 @@ class Clock:
                 draw_start = len(self._time_data[char_index]) - draw_len
                 data_buff += self._time_data[char_index][draw_start:]
             else:
-                data_buff += self._time_data[char_index][:draw_len]
+                path_buff = self._time_data[char_index][:draw_len].copy()
+                bright_start = max(len(path_buff) - 64, 0)
+                path_buff[bright_start + self.B_INDEX::4] = 255
 
-                for r in range(4, 64, 4):
-                    if len(data_buff) >= r:
-                        data_buff[-r + 2] = 255
-
-
+                data_buff += path_buff
 
         return data_buff
 
